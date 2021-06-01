@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="294.0" prefWidth="265.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.bsuir.oop.lab_3.controller.AddPlaneController">
+   <children>
+      <TextField fx:id="inputLengthField" layoutX="63.0" layoutY="11.0" prefHeight="25.0" prefWidth="69.0" />
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="20.0" prefWidth="49.0" text="Length:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inputWeightField" layoutX="75.0" layoutY="206.0" prefHeight="25.0" prefWidth="69.0" />
+      <Label layoutX="14.0" layoutY="209.0" prefHeight="20.0" prefWidth="50.0" text="Weight:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inputWingspanField" layoutX="124.0" layoutY="88.0" prefHeight="25.0" prefWidth="69.0" />
+      <Label layoutX="14.0" layoutY="88.0" prefHeight="26.0" prefWidth="78.0" text="Wings span:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inputMaxFlightAltitudeField" layoutX="124.0" layoutY="127.0" prefHeight="25.0" prefWidth="69.0" />
+      <Label layoutX="14.0" layoutY="127.0" prefHeight="26.0" prefWidth="100.0" text="Flight altitude:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inputCompanyField" layoutX="88.0" layoutY="50.0" prefHeight="25.0" prefWidth="69.0" />
+      <Label layoutX="14.0" layoutY="53.0" prefHeight="20.0" prefWidth="69.0" text="Company:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="169.0" prefHeight="20.0" prefWidth="60.0" text="Energy:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="switchEnergyField" layoutX="89.0" layoutY="166.0" prefHeight="25.0" prefWidth="149.0" />
+      <Button fx:id="submitButton" layoutX="42.0" layoutY="251.0" mnemonicParsing="false" onAction="#submitButtonAction" prefHeight="25.0" prefWidth="86.0" text="Add" />
+      <Button fx:id="cancelButton" layoutX="146.0" layoutY="251.0" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="25.0" prefWidth="78.0" text="Decline" />
+   </children>
+</AnchorPane>

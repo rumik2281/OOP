@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="654.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.bsuir.oop.lab_3.controller.MainPageController">
+   <children>
+      <MenuBar prefHeight="26.0" prefWidth="654.0" style="-fx-background-color: skyblue;">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <RadioMenuItem id="serializeRadio" fx:id="serializeRadioButton" mnemonicParsing="false" selected="true" text="Serialize">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="radioGroup" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem id="deserializeRadio" fx:id="deserializeRadioButton" mnemonicParsing="false" text="Deserialize" toggleGroup="$radioGroup" />
+              <MenuItem id="binaryButton" fx:id="binaryButtonMenu" mnemonicParsing="false" onAction="#binaryButtonAction" text="Binary" />
+                  <MenuItem id="customButton" fx:id="customButtonMenu" mnemonicParsing="false" onAction="#customButtonAction" text="JSON" />
+                  <MenuItem id="yamlButton" mnemonicParsing="false" onAction="#xmlButtonAction" text="XML" fx:id="xmlButtonMenu" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Ciphers">
+              <items>
+                  <RadioMenuItem fx:id="aesCipherMenu" mnemonicParsing="false" text="AES">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="cipherGroup" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem fx:id="blowfishCipherMenu" mnemonicParsing="false" text="Blowfish" toggleGroup="$cipherGroup" />
+                  <RadioMenuItem fx:id="noCipherMenu" mnemonicParsing="false" selected="true" text="None" toggleGroup="$cipherGroup" />
+                  <CustomMenuItem fx:id="customMenuItem" hideOnClick="false" mnemonicParsing="false">
+                     <content>
+                        <TextField fx:id="inputKeyField" promptText="Key:" visible="false" />
+                     </content>
+                  </CustomMenuItem>
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Add">
+               <items>
+                  <MenuItem id="addButton" fx:id="addCarButton" mnemonicParsing="false" onAction="#addCarButtonAction" text="Car" />
+                  <MenuItem fx:id="addMotorcycleButton" mnemonicParsing="false" onAction="#addMotorcycleButtonAction" text="Motorcycle" />
+                  <MenuItem fx:id="addPlaneButton" mnemonicParsing="false" onAction="#addPlaneButtonAction" text="Plane" />
+                  <MenuItem fx:id="addSpaceShipButton" mnemonicParsing="false" onAction="#addSpaceShipButtonAction" text="Helicopter" />
+                  <MenuItem fx:id="addShipButton" mnemonicParsing="false" onAction="#addShipButtonAction" text="Ship" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TableView id="table" fx:id="table" editable="true" layoutY="26.0" onKeyPressed="#keyPressedAction" onMouseClicked="#mouseClickedAction" prefHeight="575.0" prefWidth="654.0" style="-fx-background-color: cyan;">
+        <columns>
+          <TableColumn fx:id="classTableColumn" prefWidth="169.99996435642242" sortable="false" text="Transport type:" />
+            <TableColumn fx:id="weightTableColumn" minWidth="0.0" prefWidth="170.0" sortable="false" text="Weight, kg" />
+            <TableColumn fx:id="energyTableColumn" maxWidth="175.33330281575525" prefWidth="149.33328247070312" sortable="false" text="Energy type:" />
+          <TableColumn fx:id="lengthTableColumn" minWidth="0.0" prefWidth="164.66673278808594" sortable="false" text="Length, m" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
